@@ -382,7 +382,45 @@ body {
 
 .link {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.btn-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 35px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-link:hover {
+    transform: translateY(-2px);
+}
+
+.btn-link.github {
+    background-color: #24292e;
+    color: #ffffff;
+}
+
+.btn-link.github:hover {
+    background-color: #000000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-link.project-url {
+    background-color: var(--secondary-color-bright);
+    color: var(--secondary-color-dark);
+    border-color: var(--primary-color);
+}
+
+.btn-link.project-url:hover {
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
 }
 
 .project-skills {
@@ -393,9 +431,11 @@ body {
 
 .project-skills div {
     padding: 2px 5px;
-    background-color: var(--primary-color-dark);
-    color: var(--primary-color-light);
+    background-color: transparent;
+    color: var(--primary-color-bright);
     border-radius: 35px;
+    font-weight: 600;
+    border: 1px solid var(--primary-color-bright);
 
 }
 

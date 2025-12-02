@@ -46,9 +46,9 @@
                         </div>
                         <div class="link">
                             <!--Lien github -->
-                            <a href="<?php echoValue($row, 'github_link'); ?>">github</a>
+                            <a href="<?php echoValue($row, 'github_link'); ?>" class="btn-link github" target="_blank">github</a>
                             <!--Lien projet -->
-                            <a href="<?php echoValue($row, 'project_link'); ?>">Voir</a>
+                            <a href="<?php echoValue($row, 'project_link'); ?>" class="btn-link project-url" target="_blank">Voir</a>
                         </div>
                         <!--Technos -->
 
