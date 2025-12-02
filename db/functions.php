@@ -18,6 +18,7 @@ function getAllProjects()
         // s'il n'y est pas, on l'ajoute + le skill
         if (isset($projects[$row['idprojects']]) == false) {
             $project = [
+                'idprojects' => $row['idprojects'],
                 'title' => $row['title'],
                 'description' => $row['description'],
                 'github_link' => $row['github_link'],
@@ -54,7 +55,7 @@ function echoValue($row, $name)
     echo htmlspecialchars($row[$name], ENT_QUOTES, 'UTF-8') . "\t";
 }
 
-function setProject($title, $description, $github_link, $project_link)
+function insertProject($title, $description, $github_link, $project_link)
 {
     $pdo = getDBConnection();
 
@@ -64,20 +65,23 @@ function setProject($title, $description, $github_link, $project_link)
     $stmt = $pdo->prepare($sql);
 
     // Exécuter avec les données
-    $stmt->execute([
+    $result = $stmt->execute([
         ':title' => $title,
         ':description' => $description,
         ':github_link' => $github_link,
         ':project_link' => $project_link,
     ]);
-    $id = $pdo->lastInsertId();
-
-    echo "Inscription réussie !";
+    if ($result) {
+        //retour vrai la requete est ok, on peut récupérer l'id créé
+        $id = $pdo->lastInsertId();
+    } else {
+        $id = null;
+    }
 
     return $id;
 }
 
-function setProjectSkill($idproject, $idskill)
+function insertProjectSkill($idproject, $idskill)
 {
     $pdo = getDBConnection();
 
@@ -87,12 +91,28 @@ function setProjectSkill($idproject, $idskill)
     $stmt = $pdo->prepare($sql);
 
     // Exécuter avec les données
-    $stmt->execute([
+    $result = $stmt->execute([
         ':idproject' => $idproject,
         ':idskill' => $idskill,
     ]);
 
-    echo "Inscription skill réussie !";
+    return $result;
+}
 
-    return true;
+function deleteProject($idProjectToDelete)
+{
+    $pdo = getDBConnection();
+
+    // Préparer la requête
+    $sql = "DELETE FROM my_portfolio_php.projects WHERE projects.idprojects = :idProjectToDelete;";
+
+    $stmt = $pdo->prepare($sql);
+
+    // Exécuter avec les données
+    $result = $stmt->execute([
+        ':idProjectToDelete' => $idProjectToDelete,
+    ]);
+
+
+    return $result;
 }

@@ -1,4 +1,12 @@
-<?php require_once "db/functions.php"; ?>
+<?php require_once "db/functions.php";
+// Si le formulaire a été posté
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // récupérer les données du formulaire
+    $idProjectToDelete = $_POST['idProjectToDelete'];
+    $success = deleteProject($idProjectToDelete);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -23,6 +31,14 @@
             <img src="./img/logo/birlicolocoe.svg" alt="photo de profil Fred">
         </section>
         <section id="MyProjects" class="projects">
+            <?php if (isset($success)):
+                if ($success): ?>
+                    <div class="alert success">Le projet a bien été supprimé</div>
+                <?php else: ?>
+                    <div class="alert error">Une erreur a été rencontrée lors de la suppression du projet !</div>
+
+            <?php endif;
+            endif; ?>
             <h2>Mes projets</h2>
             <div class="list-projects">
                 <?php
@@ -31,6 +47,11 @@
                     <article class="project">
                         <!--Image -->
                         <!--Titre -->
+                        <form action="" method="post">
+                            <input type="hidden" name="idProjectToDelete" value="<?php echoValue($row, 'idprojects'); ?>">
+                            <input class="delete-btn" type="submit" value="Delete">
+                        </form>
+
                         <h3>
                             <?php echoValue($row, 'title'); ?>
                         </h3>

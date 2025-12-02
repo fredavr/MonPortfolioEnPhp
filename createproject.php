@@ -1,4 +1,40 @@
 <?php require_once "db/functions.php"; ?>
+
+<?php require_once "includes/header.php"; ?>
+
+<?php
+$message = null;
+// Si le formulaire a été posté
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // récupérer les données du formulaire
+    $title = $_POST['title'];
+    $description = $_POST['description'];
+    $github_link = $_POST['github_link'];
+    $project_link = $_POST['project_link'];
+
+    // création du projet
+    $idprojects = insertProject($title, $description, $github_link, $project_link);
+    if ($idprojects != null) {
+        $success = true;
+        $message = "Le projet " . $title . " a été créé";
+        // gestion des skills pour le projet créé
+        $nbSkills = 0;
+        if (isset($_POST['skills'])) {
+            foreach ($_POST['skills'] as $skill) {
+                $result = insertProjectSkill($idprojects, $skill);
+                if ($result) {
+                    $nbSkills += 1;
+                }
+            }
+        }
+        $message .= " avec " . $nbSkills . " skills";
+    } else {
+        $success = false;
+        $message = "Un problème a été rencontré lors de la création du projet !";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -10,10 +46,18 @@
 </head>
 
 <body>
-    <?php require_once "includes/header.php"; ?>
     <div class="form-container">
+        <?php if (isset($success)):
+            if ($success): ?>
+                <div class="alert success"><?php echo $message ?> </div>
+            <?php else: ?>
+                <div class="alert error"><?php echo $message ?></div>
+
+        <?php endif;
+        endif; ?>
+
         <h1>Création d'un projet pour mon portfolio</h1>
-        <form method="post" action="traiteForm.php">
+        <form method="post" action="">
             <div class="form-project">
                 <div class="form-zone">
                     <label for="title">Titre</label>

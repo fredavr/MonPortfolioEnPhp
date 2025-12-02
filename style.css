@@ -481,9 +481,38 @@ body {
     padding: 20px;
 }
 
+.delete-btn {
+    background-color: #ff7878;
+    color: var(--secondary-color-dark);
+    font-weight: bold;
+    border-radius: 35px;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
 
+.delete-btn:hover {
+    background-color: #8a1a1a;
+}
 
 /* Formulaire */
+.alert {
+    padding: 10px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    color: var(--primary-color-dark);
+}
+
+.alert.success {
+    background-color: var(--primary-color-bright);
+}
+
+.alert.error {
+    background-color: #ff7878;
+}
+
 .form-container {
     display: flex;
     flex-direction: column;
