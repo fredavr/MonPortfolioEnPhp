@@ -1,0 +1,112 @@
+<svg viewBox="0 0 170 230" xmlns="http://www.w3.org/2000/svg">
+      <!-- Logo Symbole Seul -->
+      <g id="logo-symbole">
+            <text x="10" y="10" font-family="Arial, sans-serif" font-size="14" fill="#2d5016" text-anchor="middle">
+            </text>
+
+            <g transform="translate(-110, -75) scale(1)">
+                  <!-- Tronc principal -->
+                  <path d="M 200 247 Q 195 220 190 200 Q 188 180 190 160 Q 192 140 195 120" stroke="#3d6b2e"
+                        stroke-width="8" fill="none" stroke-linecap="round" />
+
+                  <!-- Branches principales gauche -->
+                  <path d="M 190 160 Q 170 150 155 145 Q 140 142 130 145" stroke="#3d6b2e" stroke-width="5" fill="none"
+                        stroke-linecap="round" />
+                  <path d="M 192 180 Q 175 175 160 173 Q 145 172 145 175" stroke="#3d6b2e" stroke-width="5" fill="none"
+                        stroke-linecap="round" />
+
+                  <!-- Branches principales droite -->
+                  <path d="M 193 160 Q 215 150 230 145 Q 245 142 255 145" stroke="#3d6b2e" stroke-width="5" fill="none"
+                        stroke-linecap="round" />
+                  <path d="M 193 180 Q 210 175 225 173 Q 240 172 245 175" stroke="#3d6b2e" stroke-width="5" fill="none"
+                        stroke-linecap="round" />
+
+                  <!-- Branches sommitales -->
+                  <path d="M 195 120 Q 185 110 175 105 Q 165 102 160 105" stroke="#3d6b2e" stroke-width="5" fill="none"
+                        stroke-linecap="round" />
+                  <path d="M 195 120 Q 205 110 215 105 Q 225 102 230 105" stroke="#3d6b2e" stroke-width="5" fill="none"
+                        stroke-linecap="round" />
+                  <path d="M 195 120 Q 195 105 195 95" stroke="#3d6b2e" stroke-width="5" fill="none"
+                        stroke-linecap="round" />
+
+                  <!-- Feuillage organique - cercles verts superposés -->
+                  <circle cx="130" cy="145" r="15" fill="#6ba854" opacity="0.7" />
+                  <circle cx="140" cy="138" r="12" fill="#7db866" opacity="0.7" />
+                  <circle cx="135" cy="155" r="10" fill="#5a8c4a" opacity="0.7" />
+
+                  <circle cx="255" cy="145" r="15" fill="#6ba854" opacity="0.7" />
+                  <circle cx="245" cy="138" r="12" fill="#7db866" opacity="0.7" />
+                  <circle cx="250" cy="155" r="10" fill="#5a8c4a" opacity="0.7" />
+
+                  <circle cx="160" cy="173" r="13" fill="#6ba854" opacity="0.7" />
+                  <circle cx="150" cy="168" r="10" fill="#7db866" opacity="0.7" />
+                  <circle cx="145" cy="180" r="9" fill="#5a8c4a" opacity="0.7" />
+
+                  <circle cx="225" cy="173" r="13" fill="#6ba854" opacity="0.7" />
+                  <circle cx="235" cy="168" r="10" fill="#7db866" opacity="0.7" />
+                  <circle cx="240" cy="180" r="9" fill="#5a8c4a" opacity="0.7" />
+
+                  <circle cx="160" cy="105" r="12" fill="#6ba854" opacity="0.7" />
+                  <circle cx="168" cy="98" r="9" fill="#7db866" opacity="0.7" />
+                  <circle cx="155" cy="115" r="8" fill="#5a8c4a" opacity="0.7" />
+
+                  <circle cx="230" cy="105" r="12" fill="#6ba854" opacity="0.7" />
+                  <circle cx="222" cy="98" r="9" fill="#7db866" opacity="0.7" />
+                  <circle cx="235" cy="115" r="8" fill="#5a8c4a" opacity="0.7" />
+
+                  <circle cx="195" cy="95" r="11" fill="#6ba854" opacity="0.7" />
+                  <circle cx="190" cy="88" r="9" fill="#7db866" opacity="0.7" />
+                  <circle cx="200" cy="88" r="8" fill="#8cc977" opacity="0.7" />
+
+                  <!-- Racines tarabiscotées et entrelacées - plus fines -->
+                  <path d="M 200 245 Q 185 260 175 268 Q 165 275 158 283 Q 152 290 143 292" stroke="#3d6b2e"
+                        stroke-width="2" fill="none" stroke-linecap="round" opacity="1" />
+                  <path d="M 200 245 Q 215 260 225 268 Q 235 275 242 283 Q 248 290 252 298" stroke="#3d6b2e"
+                        stroke-width="2" fill="none" stroke-linecap="round" opacity="1" />
+                  <path d="M 200 248 Q 192 258 188 265 Q 182 272 178 280 Q 175 287 173 295" stroke="#3d6b2e"
+                        stroke-width="1.8" fill="none" stroke-linecap="round" opacity="1" />
+                  <path d="M 200 248 Q 208 258 212 265 Q 218 272 222 280 Q 225 287 227 295" stroke="#3d6b2e"
+                        stroke-width="1.8" fill="none" stroke-linecap="round" opacity="1" />
+                  <path d="M 200 250 Q 197 262 196 270 Q 194 278 193 286 Q 192 293 185 303" stroke="#3d6b2e"
+                        stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.8" />
+                  <path d="M 200 250 Q 203 262 204 270 Q 206 278 207 286 Q 208 293 215 302" stroke="#3d6b2e"
+                        stroke-width="2" fill="none" stroke-linecap="round" opacity="0.8" />
+
+                  <!-- Ramifications secondaires tortueuses - plus fines -->
+                  <path d="M 175 268 Q 168 273 165 280 Q 163 285 162 290" stroke="#4a7c3a" stroke-width="1.2"
+                        fill="none" stroke-linecap="round" opacity="0.7" />
+                  <path d="M 225 268 Q 232 273 235 280 Q 237 285 258 290" stroke="#4a7c3a" stroke-width="1.2"
+                        fill="none" stroke-linecap="round" opacity="0.7" />
+                  <path d="M 188 265 Q 183 270 180 276 Q 178 281 190 296" stroke="#4a7c3a" stroke-width="1" fill="none"
+                        stroke-linecap="round" opacity="0.7" />
+                  <path d="M 212 265 Q 217 270 220 276 Q 222 281 215 292" stroke="#4a7c3a" stroke-width="1" fill="none"
+                        stroke-linecap="round" opacity="0.7" />
+
+                  <!-- Code binaire intégré aux racines - plus discret -->
+                  <text x="148" y="297" font-family="Courier, monospace" font-size="7" fill="#2d5016" font-weight="700"
+                        opacity="1">1</text>
+                  <text x="160" y="297" font-family="Courier, monospace" font-size="7" fill="#2d5016" font-weight="700"
+                        opacity="1">0</text>
+                  <text x="170" y="285" font-family="Courier, monospace" font-size="7" fill="#2d5016" font-weight="700"
+                        opacity="1">1</text>
+                  <text x="252" y="304" font-family="Courier, monospace" font-size="7" fill="#2d5016" font-weight="700"
+                        opacity="1">0</text>
+                  <text x="238" y="292" font-family="Courier, monospace" font-size="7" fill="#2d5016" font-weight="700"
+                        opacity="1">1</text>
+                  <text x="226" y="286" font-family="Courier, monospace" font-size="7" fill="#2d5016" font-weight="700"
+                        opacity="1">0</text>
+                  <text x="191" y="303" font-family="Courier, monospace" font-size="7" fill="#2d5016" font-weight="700"
+                        opacity="1">1</text>
+                  <text x="207" y="303" font-family="Courier, monospace" font-size="7" fill="#2d5016" font-weight="700"
+                        opacity="1">0</text>
+                  <text x="175" y="276" font-family="Courier, monospace" font-size="6" fill="#2d5016" font-weight="700"
+                        opacity="1">0</text>
+                  <text x="223" y="278" font-family="Courier, monospace" font-size="6" fill="#2d5016" font-weight="700"
+                        opacity="1">1</text>
+                  <text x="165" y="270" font-family="Courier, monospace" font-size="6" fill="#2d5016" font-weight="700"
+                        opacity="1">1</text>
+                  <text x="236" y="275" font-family="Courier, monospace" font-size="6" fill="#2d5016" font-weight="700"
+                        opacity="1">0</text>
+            </g>
+      </g>g>
+</svg>

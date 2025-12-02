@@ -1,0 +1,516 @@
+:root {
+    /* Colors #3d6b2e #4a7c3a rgb(90, 140, 74) rgb(125, 184, 102) #6ba854 */
+    --primary-color-dark: rgb(0, 15, 0);
+    --primary-color-light: rgb(220, 255, 220);
+    --primary-color-bright: rgb(125, 184, 102);
+    --secondary-color-dark: rgb(17, 11, 0);
+    --secondary-color-light: rgb(248, 236, 221);
+    --secondary-color-bright: rgba(246, 158, 8, 0.75);
+
+    --background-color: #F9FAFB;
+    /* Gray 50 */
+    --surface-color: #FFFFFF;
+    --text-color: #111827;
+    /* Gray 900 */
+    --text-muted: #6B7280;
+    /* Gray 500 */
+    --accent-color: rgb(48, 31, 2);
+    /* Amber 500 */
+    --border-color: #E5E7EB;
+    /* Gray 200 */
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 8rem;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+    /* Border Radius */
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 1rem;
+    --radius-full: 9999px;
+}
+
+/* Reset CSS Moderne */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Supprimer les marges par défaut */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Hauteur et scroll fluide */
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+/* Configuration du body */
+body {
+    min-height: 100%;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+}
+
+/* Éléments médias */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Formulaires */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+}
+
+/* Supprimer les styles par défaut des boutons */
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Empêcher le débordement de texte */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* Listes */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Liens */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Supprimer les animations pour ceux qui les préfèrent réduites */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Fin du Reset CSS Moderne */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--primary-color-dark);
+    color: var(--primary-color-light);
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: var(--primary-color-dark);
+    color: var(--primary-color-light);
+    border-bottom: 1px solid var(--secondary-color-bright);
+}
+
+.site-header .logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.site-header .logo img {
+    width: 30px;
+}
+
+.site-header .logo a {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--secondary-color-bright);
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 25px;
+}
+
+.main-nav ul li a {
+    color: var(--secondary-color-light);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: var(--secondary-color-bright);
+}
+
+.cta .btn-primary {
+    padding: 10px 20px;
+    background-color: var(--secondary-color-light);
+    color: var(--secondary-color-dark);
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta .btn-primary:hover {
+    background-color: var(--secondary-color-bright);
+}
+
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 2rem 2rem;
+    max-width: 1200px;
+    margin: 15px auto 15px auto;
+
+    /* Look moderne */
+    background: linear-gradient(135deg, var(--primary-color-light) 5%, var(--primary-color-bright) 30%, var(--primary-color-dark) 95%);
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+}
+
+.hero-section div h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--primary-color-dark);
+}
+
+.hero-section div h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--primary-color-dark);
+}
+
+.hero-section div p {
+    font-size: 1.2rem;
+    color: var(--primary-color-dark);
+    max-width: 450px;
+    padding-top: 10px;
+}
+
+.hero-section img {
+    width: 250px;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    transition: transform .3s ease;
+}
+
+.hero-section img:hover {
+    transform: scale(1.03);
+}
+
+/* 🌙 Responsive */
+@media (max-width: 900px) {
+    .hero-section {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-section img {
+        width: 220px;
+    }
+
+    .hero-section div div {
+        margin: auto;
+    }
+}
+
+
+
+.site-footer {
+    background-color: var(--primary-color-dark);
+    color: var(--primary-color-light);
+    padding: 15px 40px;
+    font-size: 0.9rem;
+    border-top: 1px solid var(--secondary-color-bright);
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-content div {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-about a {
+    color: var(--secondary-color-bright);
+    margin-bottom: 10px;
+}
+
+.footer-about img {
+    width: 30px;
+}
+
+.footer-links ul {
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    color: var(--secondary-color-light);
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: var(--secondary-color-bright);
+}
+
+.footer-contact p {
+    margin-bottom: 8px;
+}
+
+.footer-bottom {
+    text-align: left;
+    margin-top: 30px;
+    padding-top: 10px;
+    font-size: 0.7rem;
+    color: var(--primary-color-light);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--primary-color-dark);
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 15px auto 15px auto;
+
+    /* Look moderne */
+    background: linear-gradient(135deg, var(--primary-color-dark) 5%, var(--primary-color-bright) 30%, var(--primary-color-light) 95%);
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+
+}
+
+
+.list-projects {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+
+.project {
+    width: calc(33% - 10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+    background: linear-gradient(135deg, #ffffff, var(--secondary-color-light));
+    color: var(--secondary-color-dark);
+
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.description {
+    flex-grow: 1;
+}
+
+.link {
+    display: flex;
+    justify-content: space-around;
+}
+
+.project-skills {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px 0;
+}
+
+.project-skills div {
+    padding: 2px 5px;
+    background-color: var(--primary-color-dark);
+    color: var(--primary-color-light);
+    border-radius: 35px;
+
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--primary-color-dark);
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 15px auto 15px auto;
+
+    /* Look moderne */
+    background: linear-gradient(135deg, var(--primary-color-light) 5%, var(--primary-color-bright) 30%, var(--primary-color-dark) 95%);
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+
+}
+
+
+.list-skills {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+
+.skill {
+    width: 100px;
+    height: 100px;
+    color: var(--secondary-color-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #ffffff, var(--secondary-color-light));
+    border-radius: 50%;
+    padding: 20px;
+}
+
+
+
+/* Formulaire */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.form-project,
+.form-skills {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: var(--secondary-color-dark);
+    background: linear-gradient(135deg, #ffffff, var(--secondary-color-light));
+    border-radius: 10px;
+    border: 1px solid var(--secondary-color-bright);
+    padding: 10px;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.form-zone {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    border: none;
+}
+
+.form-zone input,
+.form-zone textarea {
+    width: 80%;
+    height: auto;
+}
+
+.form-zone label {
+    width: 20%;
+    height: auto;
+}
+
+.form-skill {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 15px;
+}
+
+.form-skill input,
+.form-skill label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.submit-btn {
+    background-color: var(--secondary-color-light);
+    color: var(--secondary-color-dark);
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background-color: var(--secondary-color-bright);
+}
