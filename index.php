@@ -83,7 +83,7 @@ if (isLoggedIn()) {
                 <?php endforeach; ?>
             </div>
         </section>
-        <section class="skills">
+        <section id="skills" class="skills">
             <h2>Mes skills</h2>
             <div class="list-skills">
                 <?php

@@ -5,10 +5,9 @@
     </div>
     <nav class="main-nav">
         <ul>
-            <li><a href="../index.php">Accueil</a></li>
-            <li><a href="#">À propos</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="/index.php">Accueil</a></li>
+            <li><a href="/index.php#MyProjects">Mes projets</a></li>
+            <li><a href="/index.php#skills">Mes compétences</a></li>
             <?php if (isLoggedIn()): ?>
                 <li><a href="/createproject.php">Créer un projet</a></li>
             <?php endif ?>
