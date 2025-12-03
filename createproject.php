@@ -1,8 +1,8 @@
-<?php require_once "db/functions.php"; ?>
-
-<?php require_once "includes/header.php"; ?>
-
 <?php
+require_once 'utils/session.php';
+require_once "db/functions.php";
+require_once "includes/header.php";
+
 $message = null;
 // Si le formulaire a été posté
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

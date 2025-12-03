@@ -1,4 +1,7 @@
-<?php require_once "db/functions.php";
+<?php
+require_once 'utils/session.php';
+require_once "db/functions.php";
+
 // Si le formulaire a été posté
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // récupérer les données du formulaire
