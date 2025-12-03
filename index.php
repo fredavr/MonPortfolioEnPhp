@@ -1,13 +1,14 @@
 <?php
 require_once 'utils/session.php';
 require_once "db/functions.php";
-
-// Si le formulaire a été posté
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // récupérer les données du formulaire
-    $idProjectToDelete = $_POST['idProjectToDelete'];
-    $success = deleteProject($idProjectToDelete);
-}
+if (isLoggedIn()) {
+    // Si le formulaire a été posté
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        // récupérer les données du formulaire
+        $idProjectToDelete = $_POST['idProjectToDelete'];
+        $success = deleteProject($idProjectToDelete);
+    }
+};
 ?>
 
 <!DOCTYPE html>
@@ -48,13 +49,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $projects = getAllProjects();
                 foreach ($projects as $row) : ?>
                     <article class="project">
-                        <!--Image -->
-                        <!--Titre -->
-                        <form action="" method="post">
-                            <input type="hidden" name="idProjectToDelete" value="<?php echoValue($row, 'idprojects'); ?>">
-                            <input class="delete-btn" type="submit" value="Delete">
-                        </form>
+                        <!--Bouton delete si on est connecté -->
+                        <?php if (isLoggedIn()): ?>
+                            <form action="" method="post">
+                                <input type="hidden" name="idProjectToDelete" value="<?php echoValue($row, 'idprojects'); ?>">
+                                <input class="delete-btn" type="submit" value="Delete">
+                            </form>
+                        <?php endif ?>
 
+                        <!--Titre -->
                         <h3>
                             <?php echoValue($row, 'title'); ?>
                         </h3>

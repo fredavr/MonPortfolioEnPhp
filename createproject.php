@@ -1,7 +1,8 @@
 <?php
 require_once 'utils/session.php';
 require_once "db/functions.php";
-require_once "includes/header.php";
+requireLogin();
+
 
 $message = null;
 // Si le formulaire a été posté
@@ -46,6 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
+    <?php require_once "includes/header.php"; ?>
     <div class="form-container">
         <?php if (isset($success)):
             if ($success): ?>

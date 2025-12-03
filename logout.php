@@ -1,5 +1,4 @@
 <?php
-//session_start();
 //$_SESSION['idUser'] = null;
 session_start();
 session_destroy();
