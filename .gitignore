@@ -1,2 +1,2 @@
-db/db_connect.php
 utils/createUser.php
+db/config.php
