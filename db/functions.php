@@ -116,3 +116,17 @@ function deleteProject($idProjectToDelete)
 
     return $result;
 }
+
+function getUserByEmail($email)
+{
+    $pdo = getDBConnection();
+
+    $sql = "SELECT * FROM my_portfolio_php.users WHERE email = :email;";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([
+        ':email' => $email,
+    ]);
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    return $result;
+}

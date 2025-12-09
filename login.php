@@ -5,12 +5,14 @@ require_once "db/functions.php";
 // Si le formulaire a été posté
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // récupérer les données du formulaire
-    $username = $_POST['username'];
+    $email = $_POST['email'];
     $password = $_POST['password'];
 
-    // simuler une connexion sans passer par la base de données
-    if ($username == 'Fredo' and $password == 'Fred') {
-        $_SESSION['idUser'] = $username;
+    // Récupérer l'utilisateur avec l'email et vérifier le mot de passe
+    $user = getUserByEmail($email);
+
+    if ($user and $password == password_verify($password, $user['password'])) {
+        $_SESSION['idUser'] = $user['idusers'];
         header('location: index.php');
     } else {
         echo "Mot de passe incorrect";
@@ -36,8 +38,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <h1>Se connecter</h1>
             <form method="post" action="">
                 <div class="form-zone">
-                    <label for="username">Nom d'utilisateur</label>
-                    <input id="username" type="text" name="username" required>
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="email" required>
                 </div>
                 <div class="form-zone">
                     <label for="password">Mot de passe</label>
