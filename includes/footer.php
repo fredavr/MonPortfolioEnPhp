@@ -21,3 +21,7 @@
         &copy; 2025 BirlicoLocoe. Tous droits réservés.
     </div>
 </footer>
+
+</body>
+
+</html>
