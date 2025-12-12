@@ -4,14 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
+    <title>Portfolio de Frédérique Avrillon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./style.css">
+
 </head>
 
 <header class="site-header">
     <div class="logo">
         <img src="../img/logo/birlicolocoe.svg" alt="Logo de BirlicoLocoe">
-        <a href="#MyProjects">BirlicoLocoe</a>
+        <a href="../index.php">BirlicoLocoe</a>
     </div>
     <nav class="main-nav">
         <ul>
@@ -32,15 +34,5 @@
         <?php endif ?>
     </div>
 </header>
-
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio de Frédérique Avrillon</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
 
 <body>

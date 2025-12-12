@@ -2,7 +2,7 @@
 
 function getDBConnection()
 {
-    $config = require 'config.php';
+    $config = require __DIR__ . '/../ignore/config.php';
     try {
         //phpinfo();
         $user = $config['DB_USER'];

@@ -14,7 +14,7 @@ require_once "includes/header.php";
 ?>
 <main>
     <section id="Hero" class="hero-section">
-        <div>
+        <div class="hero-content">
             <h1>Développer l'avenir sans effacer la nature</h1>
             <h2>Frédérique Avrillon</h2>
             <p>Je peux vous aider à concrétiser vos idées, vos envies, vos besoins ...</p>
@@ -73,7 +73,7 @@ require_once "includes/header.php";
         </div>
     </section>
     <section id="skills" class="skills">
-        <h2>Mes skills</h2>
+        <h2>Mes competences</h2>
         <div class="list-skills">
             <?php
             $skills = getAllSkills();

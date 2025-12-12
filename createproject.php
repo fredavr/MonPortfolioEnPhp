@@ -46,28 +46,26 @@ require_once "includes/header.php"; ?>
     <?php endif;
     endif; ?>
 
-    <h1>Création d'un projet pour mon portfolio</h1>
-    <form method="post" action="">
-        <div class="form-project">
-            <div class="form-zone">
+    <div class="form-card">
+        <h1>Création d'un projet pour mon portfolio</h1>
+        <form method="post" action="">
+            <div class="form-group">
                 <label for="title">Titre</label>
                 <input id="title" type="text" name="title" placeholder="Titre du nouveau projet" required>
             </div>
-            <div class="form-zone">
+            <div class="form-group">
                 <label for="description">Description</label>
                 <textarea id="description" name="description" placeholder="Décrire le nouveau projet" required></textarea>
             </div>
-            <div class="form-zone">
+            <div class="form-group">
                 <label for="github_link">Lien github</label>
                 <input id="github_link" type="url" name="github_link" placeholder="https://github.com/...">
             </div>
-            <div class="form-zone">
+            <div class="form-group">
                 <label for="project_link">Lien du projet</label>
                 <input id="project_link" type="url" name="project_link" placeholder="https://exemple.fr">
             </div>
-        </div>
-        <div class="form-skills">
-            <fieldset class="form-zone">
+            <fieldset class="form-group form-skills">
                 <legend>Cocher les skills</legend>
                 <?php
                 $skills = getAllSkills();
@@ -78,8 +76,8 @@ require_once "includes/header.php"; ?>
                     </div>
                 <?php endforeach; ?>
             </fieldset>
-        </div>
-        <button type="submit" class="submit-btn">Créer le projet</button>
-    </form>
+            <button type="submit" class="submit-btn">Créer le projet</button>
+        </form>
+    </div>
 </div>
 <?php include_once "includes/footer.php"; ?>
