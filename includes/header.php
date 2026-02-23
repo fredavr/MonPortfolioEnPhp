@@ -1,24 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Frédérique Avrillon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
 <header class="site-header">
     <div class="logo">
-        <img src="../img/logo/birlicolocoe.svg" alt="Logo de BirlicoLocoe">
-        <a href="#MyProjects">BirlicoLocoe</a>
+        <img src="./img/logo/birlicolocoe.svg" alt="Logo de BirlicoLocoe">
+        <a href="./index.php">BirlicoLocoe</a>
     </div>
     <nav class="main-nav">
         <ul>
-            <li><a href="/index.php">Accueil</a></li>
-            <li><a href="/index.php#MyProjects">Mes projets</a></li>
-            <li><a href="/index.php#skills">Mes compétences</a></li>
+            <li><a href="./index.php">Accueil</a></li>
+            <li><a href="./index.php#MyProjects">Mes projets</a></li>
+            <li><a href="./index.php#skills">Mes compétences</a></li>
             <?php if (isLoggedIn()): ?>
-                <li><a href="/createproject.php">Créer un projet</a></li>
+                <li><a href="./createproject.php">Créer un projet</a></li>
             <?php endif ?>
 
         </ul>
     </nav>
     <div class="cta">
         <?php if (isLoggedIn()): ?>
-            <a href="/logout.php" class="btn-primary">Se déconnecter</a>
+            <a href="./logout.php" class="btn-primary">Se déconnecter</a>
         <?php else: ?>
-            <a href="/login.php" class="btn-primary">Se connecter</a>
+            <a href="./login.php" class="btn-primary">Se connecter</a>
         <?php endif ?>
     </div>
 </header>
+
+<body>

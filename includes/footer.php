@@ -1,14 +1,14 @@
 <footer class="site-footer">
     <div class="footer-content">
         <div class="footer-about">
-            <img src="../img/logo/birlicolocoe.svg" alt="Logo de BirlicoLocoe">
+            <img src="./img/logo/birlicolocoe.svg" alt="Logo de BirlicoLocoe">
             <a href="#Hero">BirlicoLocoe</a>
             <p>Développer l'avenir sans effacer la nature</p>
         </div>
         <div class="footer-links">
             <h4>Liens utiles</h4>
             <ul>
-                <li><a href="../index.php">Accueil</a></li>
+                <li><a href="./index.php">Accueil</a></li>
             </ul>
         </div>
         <div class="footer-contact">
@@ -21,3 +21,7 @@
         &copy; 2025 BirlicoLocoe. Tous droits réservés.
     </div>
 </footer>
+
+</body>
+
+</html>

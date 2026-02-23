@@ -19,37 +19,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-?>
-
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-
-<body>
-    <?php require_once "includes/header.php"; ?>
-    <main>
-        <div class="form-container">
+require_once "includes/header.php"; ?>
+<main>
+    <div class="form-container">
+        <div class="form-card">
             <h1>Se connecter</h1>
             <form method="post" action="">
-                <div class="form-zone">
+                <div class="form-group">
                     <label for="email">Email</label>
                     <input id="email" type="email" name="email" required>
                 </div>
-                <div class="form-zone">
+                <div class="form-group">
                     <label for="password">Mot de passe</label>
-                    <input id="password" type="text" name="password" required>
+                    <div class="form-password">
+                        <input id="password" type="password" name="password" required>
+                        <div class="password-icon">
+                            <i class="fa-regular fa-eye-slash"></i>
+                            <i class="fa-regular fa-eye"></i>
+                        </div>
+                    </div>
+
                 </div>
                 <button type="submit" class="submit-btn">Me connecter</button>
             </form>
-
-    </main>
-    <?php include_once "includes/footer.php"; ?>
-</body>
-
-</html>
+        </div>
+    </div>
+</main>
+<?php include_once "includes/footer.php"; ?>
+<script src="script.js"></script>

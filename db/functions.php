@@ -5,9 +5,9 @@ function getAllProjects()
 {
     $pdo = getDBConnection();
 
-    $sql = "SELECT * FROM my_portfolio_php.projects proj
-            LEFT JOIN my_portfolio_php.projects_skills projski ON proj.idprojects = projski.idproject
-            LEFT JOIN my_portfolio_php.skills ON skills.idskills = projski.idskill;";
+    $sql = "SELECT * FROM projects proj
+            LEFT JOIN projects_skills projski ON proj.idprojects = projski.idproject
+            LEFT JOIN skills ON skills.idskills = projski.idskill;";
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
     $result = $stmt->fetchAll();
@@ -42,7 +42,7 @@ function getAllSkills()
 {
     $pdo = getDBConnection();
 
-    $sql = "SELECT * FROM my_portfolio_php.skills;";
+    $sql = "SELECT * FROM skills;";
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
     $result = $stmt->fetchAll();
@@ -60,7 +60,7 @@ function insertProject($title, $description, $github_link, $project_link)
     $pdo = getDBConnection();
 
     // Préparer la requête
-    $sql = "INSERT INTO my_portfolio_php.projects (title, description, github_link, project_link) VALUES (:title, :description, :github_link, :project_link);";
+    $sql = "INSERT INTO projects (title, description, github_link, project_link) VALUES (:title, :description, :github_link, :project_link);";
 
     $stmt = $pdo->prepare($sql);
 
@@ -86,7 +86,7 @@ function insertProjectSkill($idproject, $idskill)
     $pdo = getDBConnection();
 
     // Préparer la requête
-    $sql = "INSERT INTO my_portfolio_php.projects_skills (idproject, idskill) VALUES (:idproject, :idskill);";
+    $sql = "INSERT INTO projects_skills (idproject, idskill) VALUES (:idproject, :idskill);";
 
     $stmt = $pdo->prepare($sql);
 
@@ -104,7 +104,7 @@ function deleteProject($idProjectToDelete)
     $pdo = getDBConnection();
 
     // Préparer la requête
-    $sql = "DELETE FROM my_portfolio_php.projects WHERE projects.idprojects = :idProjectToDelete;";
+    $sql = "DELETE FROM projects WHERE projects.idprojects = :idProjectToDelete;";
 
     $stmt = $pdo->prepare($sql);
 
@@ -121,7 +121,7 @@ function getUserByEmail($email)
 {
     $pdo = getDBConnection();
 
-    $sql = "SELECT * FROM my_portfolio_php.users WHERE email = :email;";
+    $sql = "SELECT * FROM users WHERE email = :email;";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([
         ':email' => $email,
